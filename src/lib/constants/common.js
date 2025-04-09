@@ -3,3 +3,5 @@
 // https://jsonplaceholder.typicode.com/todos
 export const API_URL_TODO =
   "https://jsonplaceholder.typicode.com/todos?_limit=20";
+
+export const API_URL_POST = "https://jsonplaceholder.typicode.com/posts";

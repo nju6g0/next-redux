@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 
 import { updateTodo, deleteTodo } from "@/features/todo/todoSlice";
 import { useClickOutside } from "@/lib/hooks";
+import { ButtonPink, ButtonGray, InputText } from "@/components/common";
 
 function TodoItem({ todo }) {
   const inputRef = useRef(null);
@@ -86,8 +87,7 @@ function TodoItem({ todo }) {
       }}
     >
       {isEditing ? (
-        <input
-          className="border-2 border-gray-300 rounded-lg p-1"
+        <InputText
           ref={inputRef}
           value={editValue}
           onChange={handleEdit}
@@ -98,20 +98,8 @@ function TodoItem({ todo }) {
       ) : (
         <div className="flex items-center">
           <p className={todo.completed ? "line-through" : ""}>{todo.title}</p>
-          <button
-            type="button"
-            className="border border-rose-500 text-rose-300 font-bold py-2 px-4 rounded m-2 cursor-pointer hover:bg-rose-200 hover:text-white hover:border-rose-200"
-            onClick={handleToggle}
-          >
-            toggle
-          </button>
-          <button
-            type="button"
-            className="border border-gray-500 text-gray-300 font-bold py-2 px-4 rounded cursor-pointer hover:bg-gray-200 hover:text-white hover:border-gray-200"
-            onClick={handleDelete}
-          >
-            delete
-          </button>
+          <ButtonPink onClick={handleToggle}>toggle</ButtonPink>
+          <ButtonGray onClick={handleDelete}>delete</ButtonGray>
         </div>
       )}
     </li>

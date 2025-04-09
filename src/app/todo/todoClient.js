@@ -11,6 +11,7 @@ import {
 } from "@/features/todo/todoSlice";
 import { selectFilteredTodos } from "@/features/todo/todoSelectors";
 import TodoItem from "./components/todoItem";
+import { InputText, ButtonBlue } from "@/components/common";
 
 export default function TodoClient({ initialTodos }) {
   const dispatch = useDispatch();
@@ -62,26 +63,20 @@ export default function TodoClient({ initialTodos }) {
       <p className="text-2xl">Todo List</p>
       <label>
         search:
-        <input
-          className="border-2 border-gray-300 rounded-lg p-2"
+        <InputText
+          className="p-2"
           value={keyword}
           onChange={handleKeywordChange}
           onKeyDown={handleKeydown}
         />
       </label>
       <div className="my-5 flex items-center space-x-2">
-        <input
-          className="border-2 border-gray-300 rounded-lg p-2"
+        <InputText
+          className="p-2"
           value={newTodoTitle}
           onChange={handleTitleChange}
         />
-        <button
-          type="button"
-          className="bg-blue-500 text-white font-bold py-2 px-4 rounded"
-          onClick={handleAdd}
-        >
-          ADD
-        </button>
+        <ButtonBlue onClick={handleAdd}>ADD</ButtonBlue>
       </div>
       <ul>
         {todos.map((todo) => (

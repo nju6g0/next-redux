@@ -1,12 +1,12 @@
-import { API_URL_TODO } from "@/lib/constants/common";
+import { API_URL_POST } from "@/lib/constants/common";
 
-import TodoClient from "./todoAPIClient";
+import PostClient from "./postClient";
 
-async function fetchTodos() {
+async function fetchPosts() {
   const res = await fetch(
     // SSG(在 build time 生成 HTML 檔與 json): next.js 預設的 render 方式，只要不 cache 就會是 SSG
     // 若設定 no-store，則會在每次請求時都會重新 fetch 資料 => SSR
-    API_URL_TODO,
+    `${API_URL_POST}`,
     {
       cache: "no-store",
       // ISR: 在 build time 生成 HTML 檔與 json，並在 request 之後一段時間重新生成。
@@ -16,8 +16,8 @@ async function fetchTodos() {
   return res.json();
 }
 
-export default async function TodoPage() {
-  const todos = await fetchTodos();
+export default async function PostPage() {
+  const posts = await fetchPosts();
 
-  return <TodoClient initialTodos={todos} />;
+  return <PostClient initialPosts={posts} />;
 }

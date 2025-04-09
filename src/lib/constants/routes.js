@@ -10,9 +10,9 @@ export const ROUTES = [
     path: "/todo",
   },
   {
-    key: "todosAPI",
-    routeName: "TodosAPI",
-    path: "/todosAPI",
+    key: "post",
+    routeName: "post",
+    path: "/post",
   },
   {
     key: "other",
