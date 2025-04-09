@@ -25,6 +25,7 @@ import {
   ButtonBlue,
   InputText,
   Textarea,
+  HighlightText,
 } from "@/components/common";
 
 const TITLE = "title";
@@ -37,7 +38,6 @@ export default function PostPage({ initialPosts }) {
   const pageSize = useSelector(selectPostsPageSize);
   const postsCount = useSelector(selectPostsCount);
   const dispatch = useDispatch();
-  console.log(posts);
 
   // about add post
   const [showAdd, setShowAdd] = useState(false);
@@ -65,15 +65,17 @@ export default function PostPage({ initialPosts }) {
   };
 
   // about search post
+  const [inputValue, setInputValue] = useState("");
   const [keyword, setKeyword] = useState("");
   const handleKeyword = (e) => {
-    setKeyword(e.target.value);
+    setInputValue(e.target.value);
   };
   const handleSearch = () => {
-    dispatch(searchPost(keyword));
+    dispatch(searchPost(inputValue));
   };
   const handleSearchKeyDown = (e) => {
     if (e.key === "Enter") {
+      setKeyword(inputValue);
       handleSearch();
     }
   };
@@ -109,7 +111,7 @@ export default function PostPage({ initialPosts }) {
       <label>
         SEARCH:{" "}
         <InputText
-          value={keyword}
+          value={inputValue}
           onChange={handleKeyword}
           onKeyDown={handleSearchKeyDown}
         />
@@ -146,21 +148,13 @@ export default function PostPage({ initialPosts }) {
       <ul>
         {posts.map((post) => (
           <li key={post.id}>
-            <span
+            <p
               style={{ textDecoration: post.done ? "line-through" : "none" }}
               onClick={() => handleUpdate(Post)}
             >
-              {post.id}:{" "}
-              {post.title.split(" ").map((word, index) => (
-                <span
-                  key={word + index}
-                  className={word === keyword ? "text-red-500" : ""}
-                >
-                  {word}{" "}
-                </span>
-              ))}
-            </span>
-            <button onClick={() => handleDelete(post.id)}>刪除</button>
+              {post.id}: <HighlightText text={post.title} keyword={keyword} />
+            </p>
+            {/* <button onClick={() => handleDelete(post.id)}>刪除</button> */}
           </li>
         ))}
       </ul>

@@ -80,7 +80,7 @@ const postSlice = createSlice({
     searchPost: (state, action) => {
       const keyword = action.payload.toLowerCase();
       state.list = state.initialPosts.filter(
-        (t) => t.title.toLowerCase().includes(keyword) // ||
+        (t) => t.title.toLowerCase().includes(keyword) //||
         // t.body.toLowerCase().includes(keyword)
       );
     },
