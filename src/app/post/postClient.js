@@ -56,6 +56,8 @@ export default function PostPage({ initialPosts }) {
     }));
   };
   const handleAdd = async () => {
+    dispatch(setEndPoint(0));
+    dispatch(searchPost(""));
     await dispatch(addPost({ title: values[TITLE], body: values[BODY] }));
     setValues({
       [TITLE]: "",
@@ -71,6 +73,7 @@ export default function PostPage({ initialPosts }) {
     setInputValue(e.target.value);
   };
   const handleSearch = () => {
+    dispatch(setEndPoint(0));
     dispatch(searchPost(inputValue));
   };
   const handleSearchKeyDown = (e) => {
