@@ -1,10 +1,17 @@
-import { createSlice, nanoid } from "@reduxjs/toolkit";
+import { createSlice, nanoid, createAsyncThunk } from "@reduxjs/toolkit";
 
 const initialState = {
   todos: [],
+  todosFromServer: [],
   filtered: [],
   loading: false,
 };
+
+// ✳️ 取得所有 Todos
+export const fetchTodos = createAsyncThunk("todo/getTodos", async () => {
+  const res = await fetch(`/api/todos`);
+  return await res.json();
+});
 
 const todoSlice = createSlice({
   name: "todo",
@@ -46,6 +53,20 @@ const todoSlice = createSlice({
         t.title.toLowerCase().includes(keyword)
       );
     },
+  },
+  extraReducers: (builder) => {
+    builder
+      // 取得 Todos
+      .addCase(fetchTodos.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(fetchTodos.fulfilled, (state, action) => {
+        state.loading = false;
+        state.todosFromServer = action.payload;
+      })
+      .addCase(fetchTodos.rejected, (state) => {
+        state.loading = false;
+      });
   },
 });
 

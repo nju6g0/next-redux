@@ -27,6 +27,7 @@ import {
   Textarea,
   HighlightText,
 } from "@/components/common";
+import PostCard from "./components/postCard";
 
 const TITLE = "title";
 const BODY = "body";
@@ -57,12 +58,14 @@ export default function PostPage({ initialPosts }) {
   };
   const handleAdd = async () => {
     dispatch(setEndPoint(0));
-    dispatch(searchPost(""));
+    // dispatch(searchPost(""));
     await dispatch(addPost({ title: values[TITLE], body: values[BODY] }));
     setValues({
       [TITLE]: "",
       [BODY]: "",
     });
+    setKeyword("");
+    setInputValue("");
     setShowAdd(false);
   };
 
@@ -148,16 +151,14 @@ export default function PostPage({ initialPosts }) {
         )}
       </div>
 
-      <ul>
+      <ul className="columns-3">
         {posts.map((post) => (
-          <li key={post.id}>
-            <p
-              style={{ textDecoration: post.done ? "line-through" : "none" }}
-              onClick={() => handleUpdate(Post)}
-            >
-              {post.id}: <HighlightText text={post.title} keyword={keyword} />
-            </p>
-            {/* <button onClick={() => handleDelete(post.id)}>刪除</button> */}
+          <li
+            key={post.id}
+            className="break-inside-avoid"
+            // style={{ pageBreakInside: "avoid" }}
+          >
+            <PostCard {...post} keyword={keyword} />
           </li>
         ))}
       </ul>

@@ -15,8 +15,18 @@ export const ROUTES = [
     path: "/post",
   },
   {
-    key: "other",
+    key: "cart",
+    routeName: "cart",
+    path: "/cart",
+  },
+  {
+    key: "terms",
+    routeName: "terms",
+    path: "/terms",
+  },
+  {
+    key: "404",
     routeName: "404",
-    path: "/other",
+    path: "/404",
   },
 ];

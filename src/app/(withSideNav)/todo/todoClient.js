@@ -8,8 +8,12 @@ import {
   searchTodo,
   addTodo,
   updateTodo,
+  fetchTodos,
 } from "@/features/todo/todoSlice";
-import { selectFilteredTodos } from "@/features/todo/todoSelectors";
+import {
+  selectFilteredTodos,
+  selectTodosFromServer,
+} from "@/features/todo/todoSelectors";
 import TodoItem from "./components/todoItem";
 import { InputText, ButtonBlue } from "@/components/common";
 
@@ -17,7 +21,8 @@ export default function TodoClient({ initialTodos }) {
   const dispatch = useDispatch();
   // const todos = useSelector((state) => state.todos.filtered);
   const todos = useSelector(selectFilteredTodos);
-  // console.log(todos);
+  const todosFromServer = useSelector(selectTodosFromServer);
+  console.log(todosFromServer);
 
   // about Search
   const [keyword, setKeyword] = useState("");
@@ -56,6 +61,10 @@ export default function TodoClient({ initialTodos }) {
   useEffect(() => {
     dispatch(setTodos(initialTodos));
   }, [dispatch, initialTodos]);
+
+  useEffect(() => {
+    dispatch(fetchTodos());
+  }, [dispatch]);
 
   return (
     <div>
