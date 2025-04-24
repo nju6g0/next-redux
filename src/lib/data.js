@@ -2,7 +2,8 @@ export let cartItems = [
   {
     id: "item001",
     title: "暮光陶瓷馬克杯",
-    description: "手工打造，每一隻杯子都藏有一段故事。",
+    description:
+      "手工打造，每一隻杯子都藏有一段故事。lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.ÅSed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     price: 420,
     count: 1,
     imgUrl: "https://via.placeholder.com/100x100?text=暮光陶瓷馬克杯",
@@ -12,7 +13,8 @@ export let cartItems = [
   {
     id: "item002",
     title: "檀香書籤香氛片",
-    description: "讓閱讀時光伴隨淡淡木質香，沉澱思緒。",
+    description:
+      "讓閱讀時光伴隨淡淡木質香，沉澱思緒。lorem20 ipsum dolor sit amet, consectetur lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     price: 150,
     count: 2,
     imgUrl: "https://via.placeholder.com/100x100?text=檀香書籤香氛片",
@@ -22,7 +24,8 @@ export let cartItems = [
   {
     id: "item003",
     title: "靜好歲月筆記本",
-    description: "麻布封面搭配再生紙頁，記錄生活每個片段。",
+    description:
+      "麻布封面搭配再生紙頁，記錄生活每個片段。lorem20 ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ut labore et dolore magna aliqua.",
     price: 320,
     count: 1,
     imgUrl: "https://via.placeholder.com/100x100?text=靜好歲月筆記本",
@@ -32,7 +35,8 @@ export let cartItems = [
   {
     id: "item004",
     title: "月白木紋桌燈",
-    description: "溫柔燈光，打造溫暖書桌角落。",
+    description:
+      "溫柔燈光，打造溫暖書桌角落。lorem20 ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     price: 850,
     count: 1,
     imgUrl: "https://via.placeholder.com/100x100?text=月白木紋桌燈",
@@ -42,7 +46,8 @@ export let cartItems = [
   {
     id: "item005",
     title: "晨光森林香氛蠟燭",
-    description: "清晨的森林氣息，喚醒沉睡的心靈。",
+    description:
+      "清晨的森林氣息，喚醒沉睡的心靈。lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.lorem50 ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     price: 560,
     count: 1,
     imgUrl: "https://via.placeholder.com/100x100?text=晨光森林香氛蠟燭",
@@ -52,7 +57,8 @@ export let cartItems = [
   {
     id: "item006",
     title: "雲朵棉紗圍巾",
-    description: "柔軟觸感，如同雲朵輕輕環繞頸間。",
+    description:
+      "柔軟觸感，如同雲朵輕輕環繞頸間。lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.lorem50 ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     price: 720,
     count: 1,
     imgUrl: "https://via.placeholder.com/100x100?text=雲朵棉紗圍巾",
@@ -62,7 +68,8 @@ export let cartItems = [
   {
     id: "item007",
     title: "霧藍琉璃筆",
-    description: "沉穩筆觸，書寫心中未竟的詩句。",
+    description:
+      "沉穩筆觸，書寫心中未竟的詩句。lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.lorem50 ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     price: 260,
     count: 2,
     imgUrl: "https://via.placeholder.com/100x100?text=霧藍琉璃筆",
@@ -72,7 +79,8 @@ export let cartItems = [
   {
     id: "item008",
     title: "時光手沖咖啡組",
-    description: "專屬於你的清晨儀式感。",
+    description:
+      "專屬於你的清晨儀式感。lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.lorem50 ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     price: 1280,
     count: 1,
     imgUrl: "https://via.placeholder.com/100x100?text=時光手沖咖啡組",
@@ -82,7 +90,8 @@ export let cartItems = [
   {
     id: "item009",
     title: "青花瓷點心盤",
-    description: "淡雅藍白，午茶時光的最佳搭檔。",
+    description:
+      "淡雅藍白，午茶時光的最佳搭檔。lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.lorem50 ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     price: 430,
     count: 2,
     imgUrl: "https://via.placeholder.com/100x100?text=青花瓷點心盤",
@@ -92,7 +101,8 @@ export let cartItems = [
   {
     id: "item010",
     title: "松木收納小盒",
-    description: "收起零碎，留下生活的簡單與美好。",
+    description:
+      "收起零碎，留下生活的簡單與美好。lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.lorem50 ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     price: 360,
     count: 1,
     imgUrl: "https://via.placeholder.com/100x100?text=松木收納小盒",
@@ -102,7 +112,8 @@ export let cartItems = [
   {
     id: "item011",
     title: "靜夜琥珀手帳",
-    description: "夜色沉靜，筆下流淌生活點滴。",
+    description:
+      "夜色沉靜，筆下流淌生活點滴。lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.lorem50 ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     price: 490,
     count: 1,
     imgUrl: "https://via.placeholder.com/100x100?text=靜夜琥珀手帳",
@@ -112,7 +123,8 @@ export let cartItems = [
   {
     id: "item012",
     title: "暖心純棉襪",
-    description: "走過寒冬的溫柔小物。",
+    description:
+      "走過寒冬的溫柔小物。lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.lorem50 ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     price: 150,
     count: 3,
     imgUrl: "https://via.placeholder.com/100x100?text=暖心純棉襪",
@@ -122,7 +134,8 @@ export let cartItems = [
   {
     id: "item013",
     title: "森語手工明信片",
-    description: "寄出心意，也寄出一片山林寧靜。",
+    description:
+      "寄出心意，也寄出一片山林寧靜。lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.lorem50 ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     price: 90,
     count: 4,
     imgUrl: "https://via.placeholder.com/100x100?text=森語手工明信片",
@@ -132,7 +145,8 @@ export let cartItems = [
   {
     id: "item014",
     title: "清晨日光手巾",
-    description: "吸水性佳，晨間洗滌的好夥伴。",
+    description:
+      "吸水性佳，晨間洗滌的好夥伴。lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.lorem50 ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     price: 230,
     count: 1,
     imgUrl: "https://via.placeholder.com/100x100?text=清晨日光手巾",
@@ -142,7 +156,8 @@ export let cartItems = [
   {
     id: "item015",
     title: "木製相框擺飾",
-    description: "定格時光，收藏最溫柔的瞬間。",
+    description:
+      "定格時光，收藏最溫柔的瞬間。lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.lorem50 ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     price: 520,
     count: 1,
     imgUrl: "https://via.placeholder.com/100x100?text=木製相框擺飾",
@@ -152,7 +167,8 @@ export let cartItems = [
   {
     id: "item016",
     title: "綠意玻璃花瓶",
-    description: "為日常注入一點自然系。",
+    description:
+      "為日常注入一點自然系。lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.lorem50 ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     price: 380,
     count: 2,
     imgUrl: "https://via.placeholder.com/100x100?text=綠意玻璃花瓶",
@@ -162,7 +178,8 @@ export let cartItems = [
   {
     id: "item017",
     title: "風之詩筆筒",
-    description: "簡約設計，收納也能很有風格。",
+    description:
+      "簡約設計，收納也能很有風格。lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.lorem50 ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     price: 310,
     count: 1,
     imgUrl: "https://via.placeholder.com/100x100?text=風之詩筆筒",
@@ -172,7 +189,8 @@ export let cartItems = [
   {
     id: "item018",
     title: "原木花草茶組",
-    description: "靜靜泡上一壺茶，與午後對話。",
+    description:
+      "靜靜泡上一壺茶，與午後對話。lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.lorem50 ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     price: 980,
     count: 1,
     imgUrl: "https://via.placeholder.com/100x100?text=原木花草茶組",
@@ -182,7 +200,8 @@ export let cartItems = [
   {
     id: "item019",
     title: "暮色便當布巾",
-    description: "將便當包裹起來的，除了食物還有溫度。",
+    description:
+      "將便當包裹起來的，除了食物還有溫度。lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.lorem50 ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     price: 240,
     count: 1,
     imgUrl: "https://via.placeholder.com/100x100?text=暮色便當布巾",
@@ -192,7 +211,8 @@ export let cartItems = [
   {
     id: "item020",
     title: "山林旅記托特包",
-    description: "承載旅程與日常的小確幸。",
+    description:
+      "承載旅程與日常的小確幸。lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.lorem50 ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     price: 690,
     count: 1,
     imgUrl: "https://via.placeholder.com/100x100?text=山林旅記托特包",

@@ -1,10 +1,11 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import Image from "next/image";
 
 import { fetchItems, addItem, deleteItem } from "@/features/cart/cartSlice";
 import { selectAllItems } from "@/features/cart/cartSelectors";
-import { ButtonGray } from "@/components/common";
+import { Button } from "@/components/common";
 
 export default function CartClient({ initialTodos }) {
   const dispatch = useDispatch();
@@ -25,21 +26,38 @@ export default function CartClient({ initialTodos }) {
   return (
     <>
       <h1>I'm a cart</h1>
-      <ButtonGray onClick={handleAddItem}>add new</ButtonGray>
-      {items.map((item) => (
-        <div key={item.id}>
-          <h2>{item.title}</h2>
-          <p>{item.description}</p>
-          <p>{item.price}</p>
-          <ButtonGray
-            onClick={() => {
-              handleDeleteItem(item.id);
-            }}
+      <Button.Pink onClick={handleAddItem}>add new</Button.Pink>
+      {items.map((item) => {
+        const randomImgID = Math.floor(Math.random() * 1000);
+        return (
+          <div
+            key={item.id}
+            className="flex items-center my-2 border rounded-md border-gray-300"
           >
-            delete
-          </ButtonGray>
-        </div>
-      ))}
+            <Image
+              className="shrink-0"
+              width={100}
+              height={150}
+              src={`https://picsum.photos/id/${randomImgID}/200/300.webp`}
+              alt="product image"
+              loading="lazy"
+            />
+            <div className="ml-4">
+              <h2>{item.title}</h2>
+              <p className="line-clamp-2">{item.description}</p>
+              <p>{item.price}</p>
+              <Button.Gray
+                size="sm"
+                onClick={() => {
+                  handleDeleteItem(item.id);
+                }}
+              >
+                delete
+              </Button.Gray>
+            </div>
+          </div>
+        );
+      })}
     </>
   );
 }

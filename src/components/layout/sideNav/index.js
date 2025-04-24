@@ -11,7 +11,7 @@ export default function SideNav() {
   const pathname = usePathname(); // 獲取當前頁面路徑
   // console.log(pathname);
   return (
-    <nav className="w-xs bg-rose-50 flex flex-col items-end">
+    <nav className="w-xs bg-rose-50 flex flex-col shrink-0 items-end">
       我是側邊欄
       {ROUTES.map(({ key, routeName, path }) => (
         // <div key={key} className="px-[16px] py-[5px]">

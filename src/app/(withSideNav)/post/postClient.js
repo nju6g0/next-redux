@@ -20,9 +20,7 @@ import {
   selectPostsCount,
 } from "@/features/post/postSelectors";
 import {
-  ButtonPink,
-  ButtonGray,
-  ButtonBlue,
+  Button,
   InputText,
   Textarea,
   HighlightText,
@@ -140,14 +138,14 @@ export default function PostPage({ initialPosts }) {
                 handleValueChange(BODY, e.target.value);
               }}
             />
-            <ButtonBlue onClick={handleAdd} loading={loading}>
+            <Button.Blue onClick={handleAdd} loading={loading}>
               新增
-            </ButtonBlue>
+            </Button.Blue>
           </>
         ) : (
-          <ButtonBlue onClick={handleClickAdd} disabled={loading}>
+          <Button.Blue onClick={handleClickAdd} disabled={loading}>
             新增 Post
-          </ButtonBlue>
+          </Button.Blue>
         )}
       </div>
 
@@ -163,15 +161,15 @@ export default function PostPage({ initialPosts }) {
         ))}
       </ul>
       <div className="flex items-center">
-        <ButtonPink onClick={goPrev} disabled={endPoint <= 0}>
+        <Button.Pink onClick={goPrev} disabled={endPoint <= 0}>
           prev
-        </ButtonPink>
-        <ButtonGray
+        </Button.Pink>
+        <Button.Gray
           onClick={goNext}
           disabled={endPoint + pageSize >= postsCount}
         >
           next
-        </ButtonGray>
+        </Button.Gray>
       </div>
     </div>
   );

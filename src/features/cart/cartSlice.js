@@ -20,8 +20,7 @@ export const addItem = createAsyncThunk("cart/addItem", async () => {
       "加創汽企變稱情世，生起光北？次經直電計影不世成得數。民一產，回極乎上著向，演方合：造星就動無。個美者前親是統國時資媽是樣失流止。它兒無。",
     price: 999,
     count: 1,
-    imgUrl:
-      "https://unsplash.com/photos/colorful-buildings-and-a-leaning-tower-in-burano-A1ViroRFvus", //https://source.unsplash.com/random
+    imgUrl: "https://picsum.photos/id/${randomImgID}/200/300",
     subtotal: 999,
     inStock: true,
   };

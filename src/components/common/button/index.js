@@ -1,32 +1,45 @@
-export default function Button({
+/* eslint-disable react/display-name */
+function BaseButton({
   children,
   onClick,
   disabled = false,
   loading = false,
   className = "",
   type = "button",
+  size = "md",
+  variant = "gray", // 預設為灰色按鈕
   ...rest
 }) {
   const isDisabled = loading || disabled;
+
+  // 定義不同尺寸的 class
+  const sizeClasses = {
+    lg: "px-6 py-3 text-lg",
+    md: "px-4 py-2 text-md",
+    sm: "px-2 py-1 text-sm",
+  };
+
+  // 定義不同樣式的 class
+  const variantClasses = {
+    gray: "border-gray-400 text-gray-300 hover:bg-gray-200 hover:text-white",
+    blue: "border-blue-400 text-blue-300 hover:bg-blue-200 hover:text-white",
+    pink: "border-rose-300 text-pink-200 hover:bg-pink-200 hover:text-white",
+  };
+
   return (
     <button
       type={type}
       className={`
         border 
-        border-gray-500 
-        text-gray-300 
         font-bold 
-        py-2 
-        px-4 
         rounded 
         cursor-pointer 
-        hover:bg-gray-200 
-        hover:text-white 
-        hover:border-gray-200
         disabled:bg-gray-200
         disabled:text-gray-300
         disabled:border-gray-200
         disabled:cursor-not-allowed
+        ${sizeClasses[size]} 
+        ${variantClasses[variant]} 
         ${className}
       `}
       onClick={onClick}
@@ -60,3 +73,11 @@ export default function Button({
     </button>
   );
 }
+
+// 定義不同的子屬性按鈕
+const Button = ({ ...props }) => <BaseButton {...props} />;
+Button.Gray = (props) => <BaseButton {...props} variant="gray" />;
+Button.Blue = (props) => <BaseButton {...props} variant="blue" />;
+Button.Pink = (props) => <BaseButton {...props} variant="pink" />;
+
+export default Button;

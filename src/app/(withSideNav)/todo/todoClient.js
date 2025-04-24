@@ -15,7 +15,7 @@ import {
   selectTodosFromServer,
 } from "@/features/todo/todoSelectors";
 import TodoItem from "./components/todoItem";
-import { InputText, ButtonBlue } from "@/components/common";
+import { InputText, Button } from "@/components/common";
 
 export default function TodoClient({ initialTodos }) {
   const dispatch = useDispatch();
@@ -85,7 +85,7 @@ export default function TodoClient({ initialTodos }) {
           value={newTodoTitle}
           onChange={handleTitleChange}
         />
-        <ButtonBlue onClick={handleAdd}>ADD</ButtonBlue>
+        <Button.Blue onClick={handleAdd}>ADD</Button.Blue>
       </div>
       <ul>
         {todos.map((todo) => (
