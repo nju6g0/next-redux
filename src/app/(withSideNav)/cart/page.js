@@ -2,15 +2,20 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 
 import { fetchItems, addItem, deleteItem } from "@/features/cart/cartSlice";
 import { selectAllItems } from "@/features/cart/cartSelectors";
-import { Button } from "@/components/common";
+import { Button, Loading } from "@/components/common";
 
+const Modal = dynamic(
+  () => import(/* webpackChunkName:"Modal" */ "@/components/layout/modal"),
+  { ssr: false, loading: () => <Loading /> }
+);
 export default function CartClient({ initialTodos }) {
   const dispatch = useDispatch();
   const items = useSelector(selectAllItems);
-  console.log(items);
+  const [showModal, setShowModal] = useState(false);
 
   const handleAddItem = () => {
     dispatch(addItem({}));
@@ -26,7 +31,10 @@ export default function CartClient({ initialTodos }) {
   return (
     <>
       <h1>I'm a cart</h1>
+      <Loading className="w-6 h-6 text-gray-200 fill-rose-400" />
+      <Loading />
       <Button.Pink onClick={handleAddItem}>add new</Button.Pink>
+      <Button.Blue onClick={() => setShowModal(true)}>open modal</Button.Blue>
       {items.map((item) => {
         const randomImgID = Math.floor(Math.random() * 1000);
         return (
@@ -58,6 +66,15 @@ export default function CartClient({ initialTodos }) {
           </div>
         );
       })}
+
+      {showModal && (
+        <Modal>
+          <h3>modal content</h3>
+          <div>
+            <Button.Blue onClick={() => setShowModal(false)}>close</Button.Blue>
+          </div>
+        </Modal>
+      )}
     </>
   );
 }
